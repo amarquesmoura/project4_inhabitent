@@ -22,10 +22,13 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
 			<header id="masthead" class="site-header" role="banner">
-			<i class="fas fa-campground"></i>
 				<div class="site-branding">
-					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+					<!-- <h1 class="site-title screen-reader-text"></h1> -->
+					<!-- <p class="site-description"><?php bloginfo( 'description' ); ?></p> -->
+					<div class="logo">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<h1 class="screen-reader-text">Inhabitent</h1></a>
+					</div>
 				</div><!-- .site-branding -->
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
