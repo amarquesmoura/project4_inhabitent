@@ -1,0 +1,59 @@
+.site-header {
+  width: 100%;
+  padding: ($base__space-unit / 3) 0;
+  position: fixed;
+  border-bottom: 1px solid #e1e1e1;
+  background-color: hsla(0, 0%, 100%, 0.85);
+  transition: top 0.5s linear;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    background: url(../../images/inhabitent-logo-tent.svg) no-repeat;
+    background-size: 50px 33px;
+    height: 33px;
+    margin: 0;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 50px;
+  }
+
+  &.reverse-header {
+    position: absolute;
+    border-bottom: 0;
+    text-shadow: 1px 1px 2px #323232;
+    background-color: transparent;
+
+    h1 {
+      background: url(../../images/inhabitent-logo-tent-white.svg) no-repeat;
+      background-size: 50px 33px;
+    }
+
+    .main-navigation a {
+      color: $color__background-body;
+      &:hover {
+        color: $yellow_brand;
+      }
+    }
+    .header-search input[type='search'] {
+      color: $color__background-body;
+    }
+  }
+}
+
+.site-logo {
+  background: url(../../images/inhabitent-logo-tent.svg) no-repeat;
+  background-size: 50px 33px;
+  width: 50px;
+  height: 33px;
+  margin: 0;
+}
+
+.main-navigation {
+  display: flex;
+}
