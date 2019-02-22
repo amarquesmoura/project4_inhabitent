@@ -10,7 +10,6 @@ get_header(); ?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
 
-
         <?php 
         $latest_posts = inhabitent_get_latest_posts();
         foreach ($latest_posts as $post): setup_postdata($post);

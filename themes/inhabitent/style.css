@@ -751,7 +751,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
 .sticky {
   display: block; }
 
-.hentry {
+.entry {
   margin: 0 0 4.5rem; }
 
 .updated:not(.published) {
@@ -789,6 +789,44 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
 .single-post .entry-header {
   line-height: 0;
   position: relative; }
+
+.entry-meta,
+.blog .entry-meta,
+.single-post .entry-meta {
+  background-color: #248a83;
+  font-family: "Novecento Sans Web", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  bottom: 0;
+  padding: 1.005rem 1.5rem;
+  display: inline-block;
+  position: absolute;
+  right: 0; }
+
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-header a,
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-meta a,
+.blog .entry-header a,
+.blog .entry-meta a,
+.single-post .entry-header a,
+.single-post .entry-meta a {
+  color: #fff; }
+
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-header a:hover,
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-meta a:hover,
+.blog .entry-header a:hover,
+.blog .entry-meta a:hover,
+.single-post .entry-header a:hover,
+.single-post .entry-meta a:hover {
+  color: #f0e4d1; }
+
+.cat-links,
+.tags-links {
+  display: inline-block;
+  font-family: Novecento Sans Web, sans-serif;
+  text-transform: uppercase; }
+
+.cat-links {
+  margin-right: 1.5rem; }
 
 /* Asides */
 .blog .format-aside .entry-title,
