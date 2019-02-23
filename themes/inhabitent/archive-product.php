@@ -7,39 +7,46 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+        <?php if (have_posts()): ?>
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+        <header class="page-header">
+            <h1 class="page-title">Shop Stuff</h1>
+            <hr>
+            <ul class="product-categories-menu">
+                <?php
+                $product_terms = get_terms('product_type');
+                foreach ($product_terms as $product_term): ?>
+                <li>
+                    <p><a href="<?php echo get_term_link($product_term); ?>" class="btn">
+                            <?php echo $product_term->slug; ?></a>
+                    </p>
+                </li>
+                <?php endforeach ?>
 
-<h2> This is where our products show up</h2>
+        </header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+        <?php  /* Start the Loop */ ?>
+        <?php while (have_posts()): the_post(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+        <?php
+        get_template_part('template-parts/content');
+        ?>
 
-			<?php endwhile; ?>
+        <?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
+        <?php the_posts_navigation(); ?>
 
-		<?php else : ?>
+        <?php else: ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+        <?php get_template_part('template-parts/content', 'none'); ?>
 
-		<?php endif; ?>
+        <?php endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_footer(); ?> 
