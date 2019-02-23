@@ -19,8 +19,6 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-<h2> This is where our products show up</h2>
-
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 

@@ -17,17 +17,17 @@ get_header(); ?>
         <!-- <?php the_post_navigation(); ?> -->
 
         <div class="social-media">
-            <button type="button" class="social-btn">
+            <button type="button" class="black-btn">
                 <i class="fab fa-facebook"></i>Like
             </button>
-            <button type="button" class="social-btn">
+            <button type="button" class="black-btn">
                 <i class="fab fa-twitter"></i>Tweet
             </button>
-            <button type="button" class="social-btn">
+            <button type="button" class="black-btn">
                 <i class="fab fa-pinterest"></i>Pin
             </button>
-		</div>
-		
+        </div>
+
         <?php
                 // If comments are open or we have at least one comment, load up the comment template.
         if (comments_open() || get_comments_number()): comments_template();

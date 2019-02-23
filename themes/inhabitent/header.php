@@ -41,7 +41,7 @@
                         <?php echo esc_html('Primary Menu'); ?></button>
                     <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
                     <div>
-                        <?php get_search_form(); ?>
+                        <!-- <?php get_search_form(); ?> -->
                     </div>
                 </nav><!-- #site-navigation -->
             </div>

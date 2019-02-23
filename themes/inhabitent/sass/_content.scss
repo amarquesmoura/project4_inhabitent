@@ -126,6 +126,13 @@ body:not(.home):not(.page-template-about) {
   margin-right: 1.5rem;
 }
 
+.social-media {
+  margin: $base__space-unit 0;
+  i {
+    margin-right: 10px;
+  }
+}
+
 /* Asides */
 
 .blog .format-aside .entry-title,
@@ -135,9 +142,69 @@ body:not(.home):not(.page-template-about) {
 
 /* Comments */
 
+.comment-body {
+  display: flex;
+}
+
+.comment article {
+  padding-bottom: $base__space-unit;
+}
+
+.comment-list {
+  margin-left: 0;
+  padding-left: 0;
+  li {
+    border-bottom: $solid_border;
+  }
+}
+
+.comment-author-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: $base__space-unit;
+}
+
+.comment-author cite {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.comment-metadata {
+  color: $medium_grey_brand;
+  margin-bottom: $base__space-unit / 2;
+}
+
 .comment-content a {
   word-wrap: break-word;
 }
+
+.comment-form-author {
+  width: 49%;
+  margin-right: 1%;
+  float: left;
+  input {
+    width: 100%;
+  }
+}
+
+.comment-form-email {
+  width: 49%;
+  margin-left: 1%;
+  float: left;
+  input {
+    width: 100%;
+  }
+}
+
+.comment-form-url {
+  clear: left;
+  input {
+    width: 100%;
+  }
+}
+
 .bypostauthor {
   display: block;
 }
