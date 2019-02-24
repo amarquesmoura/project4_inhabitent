@@ -774,9 +774,9 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 1120px;
   margin-left: auto;
-  margin-right: auto;
-  width: 1120px; }
+  margin-right: auto; }
 
 body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .content-area {
   border-right: 1px solid #e1e1e1;
@@ -786,6 +786,48 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
 body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product-type):not(.single-product):not(.single-adventure) .widget-area {
   padding-left: 5%;
   width: 27%; }
+
+.single-product {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .single-product .site-content {
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto; }
+  .single-product .hentry {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .single-product .hentry .product-image,
+    .single-product .hentry .product-text {
+      width: 48%; }
+    .single-product .hentry .entry-title {
+      color: #d99054; }
+    .single-product .hentry .entry-content {
+      margin-top: 0; }
+    .single-product .hentry .price {
+      font-family: Novecento Sans Web, sans-serif;
+      font-size: 28.8px;
+      font-size: 1.8rem;
+      margin-top: 0;
+      text-transform: uppercase; }
+
+.entry-header-product h1 {
+  margin-top: 0; }
+
+.site {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
 
 .sticky {
   display: block; }
