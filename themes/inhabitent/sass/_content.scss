@@ -208,3 +208,11 @@ body:not(.home):not(.page-template-about) {
 .bypostauthor {
   display: block;
 }
+
+.hentry {
+  margin: 0 0 ($base__space-unit * 3);
+}
+
+.required {
+  color: $orange_brand;
+}
