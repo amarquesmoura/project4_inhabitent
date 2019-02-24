@@ -118,3 +118,14 @@ label {
   text-transform: uppercase;
   display: block;
 }
+
+.error-404 label {
+  display: inline-block;
+}
+
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  padding-bottom: $base__space-unit / 2;
+}

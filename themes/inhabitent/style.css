@@ -533,6 +533,15 @@ label {
   text-transform: uppercase;
   display: block; }
 
+.error-404 label {
+  display: inline-block; }
+
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  padding-bottom: 0.75rem; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -726,6 +735,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.search-toggle {
+  display: none; }
 
 /*--------------------------------------------------------------
 # Widgets

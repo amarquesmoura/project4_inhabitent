@@ -61,3 +61,21 @@ function inhabitent_product_archive($query)
     }
 }
 add_action('pre_get_posts', 'inhabitent_product_archive', 1);
+
+function inhabitent_search_form($search_form)
+{
+    $search_form = '<form role="search" method="get" class="search-form" action="' . home_url('/') . '" >
+        <fieldset>
+            <a href="#" class="search-toggle" aria-hidden="true">
+                <i class="fa fa-search"></i>
+            </a>
+            <label>
+                <input type="search" class="search-field" placeholder="Type and hit enter..."  value name="s" title="Search for:" />
+            </label>
+            <input type="submit" id="search-submit" class="screen-reader-text" value="Search" />
+        </fieldset>
+    </form>';
+
+    return $search_form;
+}
+add_filter('get_search_form', 'inhabitent_search_form');
