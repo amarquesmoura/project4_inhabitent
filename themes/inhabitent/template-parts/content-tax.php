@@ -19,8 +19,7 @@
             <?php the_title(); ?>
         </h2>
         <span class="price">
-            <?php $product_terms = get_terms('product_type'); ?>
-            <?php echo $product_terms->price; ?>
+            <?php echo CFS()->get('product_price'); ?>
         </span>
     </div>
 </div> 

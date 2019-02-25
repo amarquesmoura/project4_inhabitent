@@ -79,3 +79,13 @@ function inhabitent_search_form($search_form)
     return $search_form;
 }
 add_filter('get_search_form', 'inhabitent_search_form');
+
+function inhabitent_archive_title()
+{
+    if (is_tax('product_type')){
+    return single_term_title("", false);
+    }
+}
+add_filter('get_the_archive_title', 'inhabitent_archive_title'); 
+ 
+
