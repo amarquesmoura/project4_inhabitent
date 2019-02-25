@@ -8,6 +8,12 @@
   padding-top: 50px;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 body:not(.home):not(.page-template-about) {
   &:not(.single-adventure) {
     .content-area,

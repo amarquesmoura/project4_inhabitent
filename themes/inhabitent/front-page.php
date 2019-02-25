@@ -26,34 +26,49 @@ get_header(); ?>
                     echo "<p>$product_term->description</p>"; ?>
                     <p><a href="<?php echo get_term_link($product_term); ?>" class="btn">
                             <?php echo $product_term->slug; ?> stuff</a>
-                        <?php endforeach ?>
                 </div>
+                <?php endforeach ?>
+
         </section>
 
         <section class="latest-posts">
             <div class="container">
                 <h2>Inhabitent Journal</h2>
-                <?php
-                $latest_posts = inhabitent_get_latest_posts();
-                foreach ($latest_posts as $post): setup_postdata($post);
-                    ?>
-                <div>
+                <ul>
                     <?php
-                    if (has_post_thumbnail()) {
-                        the_post_thumbnail('medium_large');
-                    }
-                    ?>
-                    <?php 
-                    the_date();
-                    echo comments_number();
-                    the_title();
-                    ?>
-                    <a href="<?php the_permalink(); ?>">Read entry</a>
+                    $latest_posts = inhabitent_get_latest_posts();
+                    foreach ($latest_posts as $post): setup_postdata($post);
+                        ?>
+                    <li>
+                        <div class="post-thumbnail">
+                            <?php
+                            if (has_post_thumbnail()) {
+                                the_post_thumbnail('medium_large');
+                            }
+                            ?>
+                        </div>
+                        <div class="post-info">
+                            <span class="post-meta">
+                                <?php 
+                                the_date();
+                                ?> /
+                                <?php
+                                echo comments_number();
+                                ?>
+                            </span>
+                            <h3 class="post-title">
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_title(); ?>
+                                </a>
+                            </h3>
+                        </div>
+                        <a href="<?php the_permalink(); ?>" class="black-btn">Read entry</a>
+                    </li>
                     <?php endforeach;
 
                 wp_reset_postdata();
                 ?>
-                </div>
+                </ul>
             </div>
         </section>
 
@@ -62,6 +77,6 @@ get_header(); ?>
         </section>
 
     </main><!-- #main -->
-</div><!-- #primary -->
+</div><!-- #pr imary -->
 
 <?php get_footer(); ?> 
