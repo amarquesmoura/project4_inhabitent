@@ -172,6 +172,85 @@ body:not(.home):not(.page-template-about) {
   padding: 0;
 }
 
+.post-type-archive-product .page-header,
+.tax-product-type .page-header {
+  border-bottom: $dashed_border;
+  margin-bottom: $base__space-unit * 2;
+  text-align: center;
+  h1 {
+    font-size: 2.4rem;
+    margin: 0 0 ($base__space-unit / 3) 0;
+  }
+}
+
+.product-categories-menu {
+  display: flex;
+  font-family: $font__accent;
+  font-size: 1.2rem;
+  justify-content: center;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+  text-transform: uppercase;
+  li {
+    margin: 0 $base__space-unit;
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: $base__space-unit;
+  margin-bottom: $base__space-unit;
+}
+
+.product-grid-card {
+  border: 1px solid #e1e1e1;
+  .product-thumbnail {
+    background-color: #e1e1e1;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+  }
+  .wp-post-image {
+    left: 50%;
+    max-height: 250px;
+    max-width: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -52%);
+    width: auto;
+  }
+  .product-info {
+    font-size: 14.4px;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+  .product-title {
+    background: #fff;
+    display: inline;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: Merriweather Web, serif;
+    letter-spacing: 0;
+    line-height: 1.75;
+    padding-right: 0.25rem;
+    text-transform: none;
+    &:before {
+      float: left;
+      width: 0;
+      white-space: nowrap;
+      content: '...................................................';
+    }
+  }
+  .price {
+    float: right;
+    padding-left: 0.25rem;
+    background: #fff;
+  }
+}
+
 .search-header .entry-meta {
   color: $color__text-main;
 }
