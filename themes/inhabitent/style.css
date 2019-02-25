@@ -912,6 +912,25 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
 .single-post .entry-meta a:hover {
   color: #f0e4d1; }
 
+.archive:not(.post-type-archive):not(.tax-product-type) .page-header,
+.search .page-header {
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem; }
+
+.archive:not(.post-type-archive):not(.tax-product-type) .entry-meta,
+.search .entry-meta {
+  font-family: Novecento Sans Web, sans-serif;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+  background: #fff;
+  color: #404040;
+  padding: 0; }
+
+.search-header .entry-meta {
+  color: #404040; }
+
 .cat-links,
 .tags-links {
   display: inline-block;
@@ -1090,6 +1109,11 @@ object {
 .page-template-default .entry-title {
   font-size: 2.4rem;
   margin: 0; }
+
+.search .page-header {
+  border-bottom: 1px solid #e1e1e1; }
+  .search .page-header h1 {
+    font-size: 2.4rem; }
 
 .site-footer {
   background: url(../../images/dark-wood.png);
