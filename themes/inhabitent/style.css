@@ -299,10 +299,12 @@ h2 {
 
 h2 {
   color: #2f1339;
+  font-size: 33.6px;
   font-size: 2.1rem;
   margin-bottom: 1.5rem; }
 
 h3 {
+  font-size: 28.8px;
   font-size: 1.8rem;
   line-height: 1.25; }
 
@@ -423,9 +425,9 @@ table {
   margin: 0 0 1.5rem; }
 
 .container {
+  width: 1120px;
   margin-left: auto;
-  margin-right: auto;
-  width: 1120px; }
+  margin-right: auto; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -440,7 +442,7 @@ button {
   border-radius: 0;
   color: #fff;
   cursor: pointer;
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: "Novecento Sans Web", sans-serif;
   font-size: 14.4px;
   font-size: 0.9rem;
   line-height: 1;
@@ -466,7 +468,7 @@ input[type='button'], input[type='reset'], input[type='submit'] {
   border-radius: 0;
   color: #fff;
   cursor: pointer;
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: "Novecento Sans Web", sans-serif;
   font-size: 14.4px;
   font-size: 0.9rem;
   line-height: 1;
@@ -528,6 +530,7 @@ textarea {
 label {
   color: #2f1339;
   font-family: "Novecento Sans Web", sans-serif;
+  font-size: 17.6px;
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
@@ -797,12 +800,12 @@ body {
           flex-direction: column;
   min-height: 100vh; }
 
-body:not(.home):not(.page-template-about):not(.single-adventure) .content-area,
-body:not(.home):not(.page-template-about):not(.single-adventure) .widget-area {
+body:not(.home):not(.page-template-about) .content-area,
+body:not(.home):not(.page-template-about) .widget-area {
   padding-top: 3rem;
   padding-bottom: 3rem; }
 
-body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product_type):not(.single-product):not(.single-adventure) .site-content {
+body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product_type):not(.single-product) .site-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -810,12 +813,12 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
   margin-left: auto;
   margin-right: auto; }
 
-body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product_type):not(.single-product):not(.single-adventure) .content-area {
+body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product_type):not(.single-product) .content-area {
   border-right: 1px solid #e1e1e1;
   padding-right: 5%;
   width: 73%; }
 
-body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product_type):not(.single-product):not(.single-adventure) .widget-area {
+body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-product_type):not(.single-product) .widget-area {
   padding-left: 5%;
   width: 27%; }
 
@@ -847,7 +850,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
     .single-product .hentry .entry-content {
       margin-top: 0; }
     .single-product .hentry .price {
-      font-family: Novecento Sans Web, sans-serif;
+      font-family: "Novecento Sans Web", sans-serif;
       font-size: 28.8px;
       font-size: 1.8rem;
       margin-top: 0;
@@ -889,6 +892,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
 .single-post .entry-header h2 {
   background-color: #248a83;
   color: #fff;
+  font-size: 33.6px;
   font-size: 2.1rem;
   left: 0;
   padding: 0.75rem 1.5rem;
@@ -940,7 +944,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
 
 .archive:not(.post-type-archive):not(.tax-product_type) .entry-meta,
 .search .entry-meta {
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: "Novecento Sans Web", sans-serif;
   text-transform: uppercase;
   display: block;
   position: relative;
@@ -955,6 +959,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
   text-align: center; }
   .post-type-archive-product .page-header h1,
   .tax-product_type .page-header h1 {
+    font-size: 38.4px;
     font-size: 2.4rem;
     margin: 0 0 0.5rem 0; }
 
@@ -963,6 +968,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
   display: -ms-flexbox;
   display: flex;
   font-family: "Novecento Sans Web", sans-serif;
+  font-size: 19.2px;
   font-size: 1.2rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -997,11 +1003,13 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
             transform: translate(-50%, -52%);
     width: auto; }
   .product-grid-card .product-info {
+    font-size: 14.4px;
     font-size: 0.9rem;
     padding: 0.75rem 1.005rem; }
   .product-grid-card .product-title {
     background: #fff;
     display: inline;
+    font-size: 16px;
     font-size: 1rem;
     font-weight: normal;
     font-family: "Merriweather Web", serif;
@@ -1025,7 +1033,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
 .cat-links,
 .tags-links {
   display: inline-block;
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: "Novecento Sans Web", sans-serif;
   text-transform: uppercase; }
 
 .cat-links {
@@ -1167,12 +1175,12 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 .home h2 {
+  font-size: 38.4px;
   font-size: 2.4rem;
   font-weight: normal;
   margin-bottom: 3.75rem;
   text-align: center; }
 
-.home .adventures,
 .home .front-page-hero,
 .home .latest-posts,
 .home .products-section {
@@ -1334,16 +1342,18 @@ object {
     margin: 24px;
     text-transform: none; }
   .adventures-grid .adventure-title-big {
+    font-size: 48px;
     font-size: 3rem; }
   .adventures-grid .adventure-title-wide {
+    font-size: 38.4px;
     font-size: 2.4rem; }
   .adventures-grid .adventure-title-small {
+    font-size: 25.6px;
     font-size: 1.6rem; }
 
 /* About page */
 .home .site-content,
-.page-template-about .site-content,
-.single-adventure .site-content {
+.page-template-about .site-content {
   padding-top: 0; }
 
 .page-template-about .post-title {
@@ -1372,12 +1382,14 @@ object {
     margin-bottom: 0; }
 
 .page-template-default .post-title {
+  font-size: 38.4px;
   font-size: 2.4rem;
   margin: 0; }
 
 .search .page-header {
   border-bottom: 1px solid #e1e1e1; }
   .search .page-header h1 {
+    font-size: 38.4px;
     font-size: 2.4rem; }
 
 .site-footer {
@@ -1396,12 +1408,14 @@ object {
   display: flex; }
   .footer-columns h3 {
     color: #d99054;
+    font-size: 19.2px;
     font-size: 1.2rem;
     margin-bottom: 0.75rem;
     text-transform: uppercase; }
   .footer-columns p {
     margin-bottom: 0.5rem; }
   .footer-columns i {
+    font-size: 20px;
     font-size: 1.25rem;
     margin-right: 0.5rem; }
   .footer-columns .day-of-week {

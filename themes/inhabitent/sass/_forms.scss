@@ -8,23 +8,22 @@
 .btn,
 .white-btn,
 button {
-  background: #248a83;
+  background: $green_brand;
   border: none;
   border-radius: 0;
-  color: #fff;
+  color: $color__background-body;
   cursor: pointer;
-  font-family: Novecento Sans Web, sans-serif;
-  font-size: 14.4px;
-  font-size: 0.9rem;
+  font-family: $font__accent;
+  @include font-size(0.9);
   line-height: 1;
-  padding: 0.75rem 1.5rem;
+  padding: ($base__space-unit / 2) $base__space-unit;
   text-decoration: none;
   text-transform: uppercase;
   &:active,
   &:focus,
   &:hover {
     background: #19625d;
-    color: #fff;
+    color: $color__background-body;
   }
 }
 
@@ -32,23 +31,22 @@ input {
   &[type='button'],
   &[type='reset'],
   &[type='submit'] {
-    background: #248a83;
+    background: $green_brand;
     border: none;
     border-radius: 0;
-    color: #fff;
+    color: $color__background-body;
     cursor: pointer;
-    font-family: Novecento Sans Web, sans-serif;
-    font-size: 14.4px;
-    font-size: 0.9rem;
+    font-family: $font__accent;
+    @include font-size(0.9);
     line-height: 1;
-    padding: 0.75rem 1.5rem;
+    padding: ($base__space-unit / 2) $base__space-unit;
     text-decoration: none;
     text-transform: uppercase;
     &:active,
     &:focus,
     &:hover {
       background: #19625d;
-      color: #fff;
+      color: $color__background-body;
     }
   }
 }
@@ -60,22 +58,22 @@ input {
   &:active,
   &:focus,
   &:hover {
-    background-color: #248a83;
-    border: 1px solid #248a83;
-    color: #fff;
+    background-color: $green_brand;
+    border: 1px solid $green_brand;
+    color: $color__background-body;
   }
 }
 
 .white-btn {
   background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid $color__background-body;
+  color: $color__background-body;
   &:active,
   &:focus,
   &:hover {
-    background-color: #248a83;
-    border: 1px solid #248a83;
-    color: #fff;
+    background-color: $green_brand;
+    border: 1px solid $green_brand;
+    color: $color__background-body;
   }
 }
 
@@ -87,8 +85,8 @@ input[type='url'],
 input[type='password'],
 input[type='search'],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
+  color: $color__border-abbr;
+  border: 1px solid $color__background-hr;
   border-radius: 3px;
   background-color: #f4f4f4;
 
@@ -113,7 +111,7 @@ textarea {
 label {
   color: $purple_brand;
   font-family: $font__accent;
-  font-size: 1.1rem;
+  @include font-size(1.1);
   margin-bottom: $base__space-unit / 3;
   text-transform: uppercase;
   display: block;

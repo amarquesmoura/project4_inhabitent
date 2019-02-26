@@ -15,7 +15,7 @@
   display: flex;
   h3 {
     color: $orange_brand;
-    font-size: 1.2rem;
+    @include font-size(1.2);
     margin-bottom: $base__space-unit / 2;
     text-transform: uppercase;
   }
@@ -23,7 +23,7 @@
     margin-bottom: $base__space-unit / 3;
   }
   i {
-    font-size: 1.25rem;
+    @include font-size(1.25);
     margin-right: $base__space-unit / 3;
   }
   .day-of-week {

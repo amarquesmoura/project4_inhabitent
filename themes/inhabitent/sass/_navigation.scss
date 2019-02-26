@@ -60,38 +60,23 @@ a {
       a {
         width: 200px;
       }
-
-      :hover > a,
-      .focus > a {
-      }
-
-      a:hover,
-      a.focus {
-      }
     }
 
     li:hover > ul,
     li.focus > ul {
       left: auto;
-    }
+    } 
   }
+
   li {
     float: left;
     position: relative;
     padding-left: $base__space-unit;
-
-    &:hover > a,
-    &.focus > a {
-    }
   }
+  
   a {
     display: block;
     text-decoration: none;
-  }
-
-  .current_page_item > a,
-  .current-menu-item > a,
-  .current_page_ancestor > a {
   }
 }
 

@@ -24,7 +24,7 @@
     font-size: $base__space-unit;
   }
   p {
-    margin-bottom: 0.5rem;
+    margin-bottom: $base__space-unit / 3;
   }
   ul {
     padding-left: 0;

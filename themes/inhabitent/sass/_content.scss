@@ -15,20 +15,18 @@ body {
 }
 
 body:not(.home):not(.page-template-about) {
-  &:not(.single-adventure) {
-    .content-area,
-    .widget-area {
-      padding-top: $base__space-unit * 2;
-      padding-bottom: $base__space-unit * 2;
-    }
+  .content-area,
+  .widget-area {
+    padding-top: $base__space-unit * 2;
+    padding-bottom: $base__space-unit * 2;
   }
-  &:not(.post-type-archive):not(.tax-product_type):not(.single-product):not(.single-adventure) {
+  &:not(.post-type-archive):not(.tax-product_type):not(.single-product) {
     .site-content {
       display: flex;
       @include container;
     }
     .content-area {
-      border-right: 1px solid #e1e1e1;
+      border-right: $solid_border;
       padding-right: 5%;
       width: 73%;
     }
@@ -44,9 +42,7 @@ body:not(.home):not(.page-template-about) {
   display: flex;
   flex-direction: column;
   .site-content {
-    width: 1120px;
-    margin-left: auto;
-    margin-right: auto;
+    @include container;
   }
   .hentry {
     display: flex;
@@ -57,15 +53,14 @@ body:not(.home):not(.page-template-about) {
       width: 48%;
     }
     .entry-title {
-      color: #d99054;
+      color: $orange_brand;
     }
     .entry-content {
       margin-top: 0;
     }
     .price {
-      font-family: Novecento Sans Web, sans-serif;
-      font-size: 28.8px;
-      font-size: 1.8rem;
+      font-family: $font__accent;
+      @include font-size(1.8);
       margin-top: 0;
       text-transform: uppercase;
     }
@@ -114,7 +109,7 @@ body:not(.home):not(.page-template-about) {
 .single-post .entry-header h2 {
   background-color: $green_brand;
   color: $color__background-body;
-  font-size: 2.1rem;
+  @include font-size(2.1);
   left: 0;
   padding: ($base__space-unit / 2) $base__space-unit;
   position: absolute;
@@ -150,7 +145,7 @@ body:not(.home):not(.page-template-about) {
 .blog .entry-meta a,
 .single-post .entry-header a,
 .single-post .entry-meta a {
-  color: #fff;
+  color: $color__background-body;
 }
 .archive:not(.tax-product_type):not(.post-type-archive) .entry-header a:hover,
 .archive:not(.tax-product_type):not(.post-type-archive) .entry-meta a:hover,
@@ -158,18 +153,18 @@ body:not(.home):not(.page-template-about) {
 .blog .entry-meta a:hover,
 .single-post .entry-header a:hover,
 .single-post .entry-meta a:hover {
-  color: #f0e4d1;
+  color: $yellow_brand;
 }
 
 .archive:not(.post-type-archive):not(.tax-product_type) .page-header,
 .search .page-header {
-  border-bottom: 1px solid #e1e1e1;
-  margin-bottom: 3rem;
+  border-bottom: $solid_border;
+  margin-bottom: $base__space-unit * 2;
   padding-bottom: 1rem;
 }
 .archive:not(.post-type-archive):not(.tax-product_type) .entry-meta,
 .search .entry-meta {
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: $font__accent;
   text-transform: uppercase;
   display: block;
   position: relative;
@@ -184,7 +179,7 @@ body:not(.home):not(.page-template-about) {
   margin-bottom: $base__space-unit * 2;
   text-align: center;
   h1 {
-    font-size: 2.4rem;
+    @include font-size(2.4);
     margin: 0 0 ($base__space-unit / 3) 0;
   }
 }
@@ -192,7 +187,7 @@ body:not(.home):not(.page-template-about) {
 .product-categories-menu {
   display: flex;
   font-family: $font__accent;
-  font-size: 1.2rem;
+  @include font-size(1.2);
   justify-content: center;
   list-style-type: none;
   margin-left: 0;
@@ -211,9 +206,9 @@ body:not(.home):not(.page-template-about) {
 }
 
 .product-grid-card {
-  border: 1px solid #e1e1e1;
+  border: $solid_border;
   .product-thumbnail {
-    background-color: #e1e1e1;
+    background-color: $off_white_brand;
     height: 250px;
     overflow: hidden;
     position: relative;
@@ -228,13 +223,13 @@ body:not(.home):not(.page-template-about) {
     width: auto;
   }
   .product-info {
-    font-size: 0.9rem;
+    @include font-size(0.9);
     padding: ($base__space-unit / 2) ($base__space-unit * 0.67);
   }
   .product-title {
     background: $color__background-body;
     display: inline;
-    font-size: 1rem;
+    @include font-size(1);
     font-weight: normal;
     font-family: $font__main;
     letter-spacing: 0;
@@ -262,11 +257,11 @@ body:not(.home):not(.page-template-about) {
 .cat-links,
 .tags-links {
   display: inline-block;
-  font-family: Novecento Sans Web, sans-serif;
+  font-family: $font__accent;
   text-transform: uppercase;
 }
 .cat-links {
-  margin-right: 1.5rem;
+  margin-right: $base__space-unit;
 }
 
 .social-media {
