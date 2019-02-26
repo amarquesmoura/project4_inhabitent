@@ -5,6 +5,7 @@
   border-bottom: 1px solid #e1e1e1;
   background-color: hsla(0, 0%, 100%, 0.85);
   transition: top 0.5s linear;
+  z-index: 100;
 
   .container {
     display: flex;
@@ -56,6 +57,18 @@
 
 .main-navigation {
   display: flex;
+}
+
+.search-field {
+  line-height: 1;
+  padding-left: $base__space-unit;
+  fieldset {
+    padding: 0;
+  }
+  .search-toggle {
+    float: left;
+    padding-top: $base__space-unit / 5;
+  }
 }
 
 .search-toggle {

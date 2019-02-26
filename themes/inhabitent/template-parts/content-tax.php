@@ -9,7 +9,7 @@
 <div class="product-grid-card">
     <?php if (has_post_thumbnail()): ?>
     <div class="product-thumbnail">
-        <a href="<?php esc_url(get_permalink()) ?>" rel="bookmark">
+        <a href="<?php echo get_permalink() ?>" rel="bookmark">
             <?php the_post_thumbnail('medium_large'); ?>
         </a>
         <?php endif; ?>

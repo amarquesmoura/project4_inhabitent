@@ -74,6 +74,20 @@ get_header(); ?>
 
         <section class="adventures container">
             <h2>Latest Adventures</h2>
+            <div class="adventures-grid container">
+                <div class="adventure-card-big">
+                    <h3 class="adventure-title-big">Getting Back to Nature in a Canoe</h3>
+                </div>
+                <div class="adventure-card-wide">
+                    <h3 class="adventure-title-wide">A Night with Friends at the Beach</h3>
+                </div>
+                <div class="adventure-card-small-a">
+                    <h3 class="adventure-title-small">Taking in the View at Big Mountain</h3>
+                </div>
+                <div class="adventure-card-small-b">
+                    <h3 class="adventure-title-small">Star-Gazing at the Night Sky</h3>
+                </div>
+            </div>
         </section>
 
     </main><!-- #main -->
