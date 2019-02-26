@@ -22,20 +22,17 @@ Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Br
 
 ## Skills learned
 
-- Installing webpack and dependencies
-- Creating a webpack.config file to automate tasks
-- Creating partials and exporting/importing from them
-- Using classes and constructors
-- Using arrow functions
-- Using template strings
-- Destructuring objects
+- Installing Wordpress
+- Installing plugins in Wordpress
+- Using themes in Wordpress
+- Customizing a Wordpress theme
+- Using action and filter hooks in Wordpress
+- Creating a plugin for Wordpress
 
 ## Main Takeaways
 
-1 - JavaScript ES2015 brings many enhancements, especially ones that optimize Object Oriented Programing.
+1 - Wordpress is a powerful CMS that allows you to create complex websites that are relatively easy to be updated by an end user.
 
-2 - Webpack creates a dinamic development environment since it doesn't require to build to disk everytime there is a change. Using a virtual server running on memory, the response on the browser is immediate.
+2 - It is very important to understand the Wordpress Template Taxonomy in order to customize it.
 
-3 - SVGs are a powerful way to add graphics and animations to a page, in a programatic form.
-
-4 - For my stretch goal, I chose to make it possible playing the game on a mobile device. This was because my nephew was disapointed that he could not play the game on his cellphone when I shared the link with him. I learned how to use the deviceOrientation event as a controller.
+3 - In a complex project like this, Sass features like nesting, mixins and variables become really important.
