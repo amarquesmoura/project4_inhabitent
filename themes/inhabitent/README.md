@@ -36,3 +36,9 @@ Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Br
 2 - It is very important to understand the Wordpress Template Taxonomy in order to customize it.
 
 3 - In a complex project like this, Sass features like nesting, mixins and variables become really important.
+
+4 - I learnt the usage of :not in CSS in order to create rules exceptions.
+
+5 - I practiced the use of grids to organize elements in table-like fashion.
+
+6 -I appreciate the ability of mixing PHP and HTML code in a .php file. This allows me to create pages with dinamic content and minimal hard coding.
