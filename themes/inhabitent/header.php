@@ -40,9 +40,7 @@
                     <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
                         <?php echo esc_html('Primary Menu'); ?></button>
                     <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
-                    <div class="search-field">
-                        <!-- <?php get_search_form(); ?> To be included in the revision -->
-                    </div>
+                    <div class="search-field"><?php get_search_form(); ?></div>
                 </nav><!-- #site-navigation -->
             </div>
         </header><!-- #masthead -->
