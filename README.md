@@ -29,6 +29,7 @@ Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Br
 - Using action and filter hooks in Wordpress
 - Creating a plugin for Wordpress:
   I created a plugin to add a widget to the sidebar, where the user can update the business hours of his store, as seen in the image below.
+
   ![Business Hours Widget](screenshots/business_hours_widget.png)
 
 ## Main Takeaways
