@@ -19,7 +19,7 @@ get_header(); ?>
             <div class="product-categories">
                 <?php
                 $product_terms = get_terms('product_type');
-                foreach ($product_terms as $product_term): ?>
+                foreach ($product_terms as $product_term) : ?>
                 <div class="product-card">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/<?php echo $product_term->slug; ?>.svg">
                     <?php 
@@ -37,7 +37,7 @@ get_header(); ?>
                 <ul>
                     <?php
                     $latest_posts = inhabitent_get_latest_posts();
-                    foreach ($latest_posts as $post): setup_postdata($post);
+                    foreach ($latest_posts as $post) : setup_postdata($post);
                         ?>
                     <li>
                         <div class="post-thumbnail">
@@ -75,18 +75,18 @@ get_header(); ?>
         <section class="adventures container">
             <h2>Latest Adventures</h2>
             <div class="adventures-grid container">
-                <div class="adventure-card-big">
+                <article class="adventure-card-big">
                     <h3 class="adventure-title-big">Getting Back to Nature in a Canoe</h3>
-                </div>
-                <div class="adventure-card-wide">
+                </article>
+                <article class="adventure-card-wide">
                     <h3 class="adventure-title-wide">A Night with Friends at the Beach</h3>
-                </div>
-                <div class="adventure-card-small-a">
+                </article>
+                <article class="adventure-card-small-a">
                     <h3 class="adventure-title-small">Taking in the View at Big Mountain</h3>
-                </div>
-                <div class="adventure-card-small-b">
+                </article>
+                <article class="adventure-card-small-b">
                     <h3 class="adventure-title-small">Star-Gazing at the Night Sky</h3>
-                </div>
+                </article>
             </div>
         </section>
 

@@ -436,8 +436,6 @@ table {
 a {
   color: #248a83;
   text-decoration: none; }
-  a:visited {
-    color: #248a83; }
   a:hover, a:focus, a:active {
     color: #2f1339; }
   a:focus {
@@ -510,6 +508,26 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.header-search fieldset {
+  padding: 0; }
+
+.header-search .search-toggle {
+  color: #248a83;
+  float: left;
+  padding-top: 0.33rem; }
+
+.header-search label {
+  float: left;
+  margin: 0; }
+
+.header-search input[type='search'] {
+  border: 0;
+  background: transparent;
+  font-family: Novecento Sans Web, sans-serif;
+  margin-left: 0.75rem;
+  padding: 0 0.3rem;
+  text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -728,6 +746,33 @@ fieldset {
     .site-header.reverse-header .header-search input[type='search'] {
       color: #fff; }
 
+.header-search {
+  line-height: 1;
+  padding-left: 1.5rem; }
+
+.header-search .search-toggle {
+  color: #248a83;
+  float: left;
+  padding-top: 0.33rem; }
+
+.header-search fieldset {
+  padding: 0; }
+
+.header-search label {
+  float: left;
+  margin: 0; }
+
+.header-search input[type='search'] {
+  border: 0;
+  background: transparent;
+  font-family: Novecento Sans Web, sans-serif;
+  margin-left: 0.75rem;
+  padding: 0 0.3rem;
+  text-transform: uppercase; }
+
+.header-search input[type='search']:focus {
+  outline: none; }
+
 .site-logo {
   background: url(../../images/inhabitent-logo-tent.svg) no-repeat;
   background-size: 50px 33px;
@@ -741,16 +786,9 @@ fieldset {
   display: flex; }
 
 .search-field {
-  line-height: 1;
-  padding-left: 1.5rem; }
-  .search-field fieldset {
-    padding: 0; }
-  .search-field .search-toggle {
-    float: left;
-    padding-top: 0.3rem; }
-
-.search-toggle {
-  display: none; }
+  display: none;
+  width: 200px;
+  color: #fff; }
 
 /*--------------------------------------------------------------
 # Widgets

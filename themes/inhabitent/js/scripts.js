@@ -1,28 +1,26 @@
 (function($) {
   // Add a reversed menu bar to hero images in front and about pages
   if ($('body').hasClass('home') || $('body').hasClass('page-template-about')) {
-    $('.site-header').addClass('reverse-header');
+    const sh = $('.site-header');
+    sh.addClass('reverse-header');
     const wh = $(window).height();
     $(window).scroll(function() {
       if ($(window).scrollTop() < wh) {
-        $('.site-header').addClass('reverse-header');
+        sh.addClass('reverse-header');
       } else {
-        $('.site-header').removeClass('reverse-header');
+        sh.removeClass('reverse-header');
       }
     });
   }
 
   $(function() {
+    const sf = $('.search-field');
     $('.search-toggle').on('click', function(event) {
       event.preventDefault();
-      $('.search-field').animate({ width: 'toggle' }),
-        $('.search-field')
-          .children('[type="search"]')
-          .focus();
+      sf.animate({ width: 'toggle' }).focus();
     }),
-      $('.search-field').on('blur', function() {
-        '' === $('.search-field').val() &&
-          $('.search-field').animate({ width: 'hide' });
+      sf.on('blur', function() {
+        '' === sf.val() && sf.animate({ width: 'hide' });
       });
   });
 })(jQuery);

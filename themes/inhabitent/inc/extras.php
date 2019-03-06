@@ -62,29 +62,20 @@ function inhabitent_product_archive($query)
 }
 add_action('pre_get_posts', 'inhabitent_product_archive', 1);
 
-function inhabitent_search_form($search_form)
+function inhabitent_archive_title($title)
 {
-    $search_form = '<form role="search" method="get" class="search-form" action="' . home_url('/') . '" >
-        <fieldset>
-            <a href="#" class="search-toggle" aria-hidden="true">
-                <i class="fa fa-search"></i>
-            </a>
-            <label>
-                <input type="search" class="search-field" placeholder="Type and hit enter..."  value name="s" title="Search for:" />
-            </label>
-            <input type="submit" id="search-submit" class="screen-reader-text" value="Search" />
-        </fieldset>
-    </form>';
-
-    return $search_form;
-}
-add_filter('get_search_form', 'inhabitent_search_form');
-
-function inhabitent_archive_title()
-{
-    if (is_tax('product_type')){
-    return single_term_title("", false);
+    if ( is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_author() ) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    } elseif ( is_tax('product_type') ) {
+        $title = single_cat_title("", false);
     }
+        return $title;
 }
 add_filter('get_the_archive_title', 'inhabitent_archive_title'); 
  

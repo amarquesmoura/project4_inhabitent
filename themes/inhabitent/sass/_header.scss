@@ -47,6 +47,34 @@
   }
 }
 
+.header-search {
+  line-height: 1;
+  padding-left: 1.5rem;
+}
+.header-search .search-toggle {
+  color: #248a83;
+  float: left;
+  padding-top: 0.33rem;
+}
+.header-search fieldset {
+  padding: 0;
+}
+.header-search label {
+  float: left;
+  margin: 0;
+}
+.header-search input[type='search'] {
+  border: 0;
+  background: transparent;
+  font-family: Novecento Sans Web, sans-serif;
+  margin-left: 0.75rem;
+  padding: 0 0.3rem;
+  text-transform: uppercase;
+}
+.header-search input[type='search']:focus {
+  outline: none;
+}
+
 .site-logo {
   background: url(../../images/inhabitent-logo-tent.svg) no-repeat;
   background-size: 50px 33px;
@@ -60,17 +88,7 @@
 }
 
 .search-field {
-  line-height: 1;
-  padding-left: $base__space-unit;
-  fieldset {
-    padding: 0;
-  }
-  .search-toggle {
-    float: left;
-    padding-top: $base__space-unit / 5;
-  }
-}
-
-.search-toggle {
   display: none;
+  width: 200px;
+  color: #fff;
 }

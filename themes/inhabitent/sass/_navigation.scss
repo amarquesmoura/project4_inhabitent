@@ -7,10 +7,6 @@
 a {
   color: $color__link;
   text-decoration: none;
-
-  &:visited {
-    color: $color__link-visited;
-  }
   &:hover,
   &:focus,
   &:active {
@@ -65,7 +61,7 @@ a {
     li:hover > ul,
     li.focus > ul {
       left: auto;
-    } 
+    }
   }
 
   li {
@@ -73,7 +69,7 @@ a {
     position: relative;
     padding-left: $base__space-unit;
   }
-  
+
   a {
     display: block;
     text-decoration: none;
@@ -113,4 +109,28 @@ a {
     text-align: right;
     width: 50%;
   }
+}
+
+.header-search fieldset {
+  padding: 0;
+}
+
+.header-search .search-toggle {
+  color: #248a83;
+  float: left;
+  padding-top: 0.33rem;
+}
+
+.header-search label {
+  float: left;
+  margin: 0;
+}
+
+.header-search input[type='search'] {
+  border: 0;
+  background: transparent;
+  font-family: Novecento Sans Web, sans-serif;
+  margin-left: 0.75rem;
+  padding: 0 0.3rem;
+  text-transform: uppercase;
 }
