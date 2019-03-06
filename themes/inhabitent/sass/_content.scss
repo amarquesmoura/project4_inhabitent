@@ -125,7 +125,7 @@ body:not(.home):not(.page-template-about) {
   position: relative;
 }
 
-.entry-meta,
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-meta,
 .blog .entry-meta,
 .single-post .entry-meta {
   background-color: $color__link;
@@ -162,15 +162,22 @@ body:not(.home):not(.page-template-about) {
   margin-bottom: $base__space-unit * 2;
   padding-bottom: 1rem;
 }
-.archive:not(.post-type-archive):not(.tax-product_type) .entry-meta,
-.search .entry-meta {
-  font-family: $font__accent;
-  text-transform: uppercase;
-  display: block;
-  position: relative;
-  background: $color__background-body;
-  color: $color__text-main;
-  padding: 0;
+
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-header h1,
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-header h2,
+.blog .entry-header h1,
+.blog .entry-header h2,
+.single-post .entry-header h1,
+.single-post .entry-header h2 {
+  background-color: $color__link;
+  color: $color__background-body;
+  font-size: 2.1rem;
+  left: 0;
+  padding: ($base__space-unit / 2) $base__space-unit;
+  position: absolute;
+  margin-top: $base__space-unit * 1.5;
+  max-width: 75%;
+  top: 0;
 }
 
 .post-type-archive-product .page-header,

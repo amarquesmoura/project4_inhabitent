@@ -430,6 +430,88 @@ table {
   margin-right: auto; }
 
 /*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/* Links */
+a {
+  color: #248a83;
+  text-decoration: none; }
+  a:visited {
+    color: #248a83; }
+  a:hover, a:focus, a:active {
+    color: #2f1339; }
+  a:focus {
+    outline: thin dotted; }
+  a:hover, a:active {
+    outline: 0; }
+
+/* Menus */
+.main-navigation {
+  font-family: "Novecento Sans Web", sans-serif;
+  text-transform: uppercase; }
+  .main-navigation ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0; }
+    .main-navigation ul ul {
+      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 1.5rem;
+      left: -999rem;
+      z-index: 99999; }
+      .main-navigation ul ul ul {
+        left: -999rem;
+        top: 0; }
+      .main-navigation ul ul li:hover > ul,
+      .main-navigation ul ul li.focus > ul {
+        left: 100%; }
+      .main-navigation ul ul a {
+        width: 200px; }
+    .main-navigation ul li:hover > ul,
+    .main-navigation ul li.focus > ul {
+      left: auto; }
+  .main-navigation li {
+    float: left;
+    position: relative;
+    padding-left: 1.5rem; }
+  .main-navigation a {
+    display: block;
+    text-decoration: none; }
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+  display: block; }
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none; }
+  .main-navigation ul {
+    display: block; } }
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+  margin: 0 0 1.5rem;
+  overflow: hidden; }
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
+
+/*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
 /* Buttons */
@@ -460,7 +542,7 @@ button {
   button:focus,
   button:hover {
     background: #19625d;
-    color: #fff; }
+    color: #000; }
 
 input[type='button'], input[type='reset'], input[type='submit'] {
   background: #248a83;
@@ -544,88 +626,6 @@ fieldset {
   border: 0;
   padding: 0;
   padding-bottom: 0.75rem; }
-
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-/* Links */
-a {
-  color: #248a83;
-  text-decoration: none; }
-  a:visited {
-    color: #248a83; }
-  a:hover, a:focus, a:active {
-    color: #2f1339; }
-  a:focus {
-    outline: thin dotted; }
-  a:hover, a:active {
-    outline: 0; }
-
-/* Menus */
-.main-navigation {
-  font-family: "Novecento Sans Web", sans-serif;
-  text-transform: uppercase; }
-  .main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0; }
-    .main-navigation ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5rem;
-      left: -999rem;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999rem;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative;
-    padding-left: 1.5rem; }
-  .main-navigation a {
-    display: block;
-    text-decoration: none; }
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block; }
-
-@media screen and (min-width: 768px) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5rem;
-  overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -907,7 +907,7 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
   line-height: 0;
   position: relative; }
 
-.entry-meta,
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-meta,
 .blog .entry-meta,
 .single-post .entry-meta {
   background-color: #248a83;
@@ -942,15 +942,21 @@ body:not(.home):not(.page-template-about):not(.post-type-archive):not(.tax-produ
   margin-bottom: 3rem;
   padding-bottom: 1rem; }
 
-.archive:not(.post-type-archive):not(.tax-product_type) .entry-meta,
-.search .entry-meta {
-  font-family: "Novecento Sans Web", sans-serif;
-  text-transform: uppercase;
-  display: block;
-  position: relative;
-  background: #fff;
-  color: #404040;
-  padding: 0; }
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-header h1,
+.archive:not(.tax-product-type):not(.post-type-archive) .entry-header h2,
+.blog .entry-header h1,
+.blog .entry-header h2,
+.single-post .entry-header h1,
+.single-post .entry-header h2 {
+  background-color: #248a83;
+  color: #fff;
+  font-size: 2.1rem;
+  left: 0;
+  padding: 0.75rem 1.5rem;
+  position: absolute;
+  margin-top: 2.25rem;
+  max-width: 75%;
+  top: 0; }
 
 .post-type-archive-product .page-header,
 .tax-product_type .page-header {
@@ -1295,7 +1301,14 @@ object {
 .home .latest-posts .black-btn {
   position: absolute;
   bottom: 0.75rem;
-  left: 0.75rem; }
+  left: 0.75rem;
+  color: #000; }
+
+.home .adventures {
+  margin-bottom: 4.5rem; }
+
+.product-card a {
+  color: #fff; }
 
 .adventures-grid {
   display: grid;

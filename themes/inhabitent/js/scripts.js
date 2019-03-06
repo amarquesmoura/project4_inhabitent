@@ -11,4 +11,18 @@
       }
     });
   }
+
+  $(function() {
+    $('.search-toggle').on('click', function(event) {
+      event.preventDefault();
+      $('.search-field').animate({ width: 'toggle' }),
+        $('.search-field')
+          .children('[type="search"]')
+          .focus();
+    }),
+      $('.search-field').on('blur', function() {
+        '' === $('.search-field').val() &&
+          $('.search-field').animate({ width: 'hide' });
+      });
+  });
 })(jQuery);
