@@ -49,30 +49,30 @@
 
 .header-search {
   line-height: 1;
-  padding-left: 1.5rem;
-}
-.header-search .search-toggle {
-  color: #248a83;
-  float: left;
-  padding-top: 0.33rem;
-}
-.header-search fieldset {
-  padding: 0;
-}
-.header-search label {
-  float: left;
-  margin: 0;
-}
-.header-search input[type='search'] {
-  border: 0;
-  background: transparent;
-  font-family: Novecento Sans Web, sans-serif;
-  margin-left: 0.75rem;
-  padding: 0 0.3rem;
-  text-transform: uppercase;
-}
-.header-search input[type='search']:focus {
-  outline: none;
+  padding-left: $base__space-unit;
+  .search-toggle {
+    color: $green_brand;
+    float: left;
+    padding-top: 0.33rem;
+  }
+  fieldset {
+    padding: 0;
+  }
+  label {
+    float: left;
+    margin: 0;
+  }
+  input[type='search'] {
+    border: 0;
+    background: transparent;
+    font-family: $font__accent;
+    margin-left: $base__space-unit / 2;
+    padding: 0 0.3rem;
+    text-transform: uppercase;
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 .site-logo {
